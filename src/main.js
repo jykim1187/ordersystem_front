@@ -3,6 +3,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'; //index.js의 router파일을 불러오겠다
 import vuetify from './plugins/vuetify';
+import '@mdi/font/css/materialdesignicons.css'
 
 const app = createApp(App);
 

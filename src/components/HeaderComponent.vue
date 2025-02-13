@@ -14,7 +14,7 @@
                     </v-col>
                     <v-col class="d-flex justify-end">
                         <v-btn v-if="isLogin" :to="{path:'/order/cart'}">장바구니</v-btn>
-                        <v-btn :to="{path:'/product/listt'}">상품목록</v-btn>
+                        <v-btn :to="{path:'/product/list'}">상품목록</v-btn>
                         <v-btn v-if="isLogin" :to="{path:'/member/mypage'}">MyPage</v-btn>
                         <v-btn v-if="!isLogin" :to="{path:'/member/create'}">회원가입</v-btn>
                         <v-btn v-if="!isLogin" :to="{path:'/member/login'}">로그인</v-btn>

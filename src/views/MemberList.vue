@@ -44,10 +44,14 @@ export default{
         }
     },
     async created(){
-    const token = localStorage.getItem("token");
-    const headers ={Authorization : `Bearer ${token}`};
-    const response = await axios.get(`${process.env.VUE_APP_API_BASE_URL}/member/list`,{headers});
-    this.memberList = response.data;
-    }
+            try{
+                const response = await axios.get(`${process.env.VUE_APP_API_BASE_URL}/member/list`);
+                this.memberList = response.data;
+            } catch(e){
+                console.log(e);
+            }
+            
+      
+ }
 }
 </script>

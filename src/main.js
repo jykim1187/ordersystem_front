@@ -5,6 +5,7 @@ import router from './router'; //index.js의 router파일을 불러오겠다
 import vuetify from './plugins/vuetify';
 import '@mdi/font/css/materialdesignicons.css'
 import axios from 'axios';
+import store from './store';
 const app = createApp(App);
 
 //  axios 모든 요청을  인터셉팅하여  모든 요청마다 엑세스 토큰을 자동으로 포함되게한다.
@@ -46,7 +47,7 @@ axios.interceptors.request.use(
         }
     
     )
-
+app.use(store)
 app.use(vuetify)
 app.use(router)//위에서 불러온 router를 사용하겠다.
 app.mount('#app')
